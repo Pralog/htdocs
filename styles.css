@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(173, 142, 172);
+}
+
+h1 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    text-align: right;
+    font-family: 'Overlock SC', sans-serif;
+    font-display: swap;
+    color: #55bea4e5;
+    background-image: linear-gradient(to right, rgba(105,50,100,0), rgba(105,50,100,1));
+}
+
+h4{
+    font: x-small;
+    font-weight: 300;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    width: 100%;
+    margin: 0rem;
+    max-width: 100%;
+    color: rgb(121, 238, 185);
+/*I felt that using serif for smaller headings and sans-serif for larger heading is appropriate for my site. For h1 I used a Google Webfont and
+for h4 a normal one. Since I am writing a morale, I decided that using a font that already exists within the program would be much relatable than
+an outside font. But I kept both headings having the same cycan color, with h1 having a more aqua and h4 looking slightly evergreen.*/
+    
+}
+/*The container class div tag has been used in multiple occasions. But all of them has the same properties.*/
+.container{
+    text-align: center;
+    letter-spacing: 3px;
+    padding: 55px;
+    margin: 2rem auto;
+    width: 96rem;
+
+}
+
+
+.image{
+    height: 35vh;
+    width: 35vh;
+    border-radius: 80pt;
+}
+
+
+
+.image:hover{
+    border-style: none;
+    border-width: 30vh;
+    filter: sepia(75%) opacity(50%);
+    transition: background-size 0.9s ease;
+}
+
+ nav {
+    margin: 25px;
+}
+
+
+ul {
+    overflow: auto;
+    list-style-type: none;
+}
+
+li {
+    height: 25px;
+    float: left;
+    margin-right: 0px;
+    border-right: 0px solid;
+    padding: 0 20px;
+}
+
+li:last-child{
+    border-right: none;
+}
+
+li a {
+    text-decoration: none;
+    color: #18e718f8;
+    font: 25px/1 helvectica, verdana, sans-serif;
+    text-transform: uppercase;
+    transition: all 0.5s ease;
+}
+/*I used the same CSS which Liz used to show us in week 5. but rather than keeping it all, i decide to change its colour to bright purple. It 
+not only maches with the background colour, but also with the colours of the letters as well.*/
+li a:hover {
+    color: #a83cd3;
+}
+
+li :active a {
+    font-weight: bold;
+    color: rgba(7, 18, 119, 0.7);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 0rem;
+    grid-auto-columns: 150vmin;
+}
+
+.gallery-item {
+    max-width: 100%;
+    border-radius: 25px;
+    transition: all .3s;
+    overflow: auto;
+}
+
+/* For the tag below, I could've kept everything under the same image class. But I changed the class to picture since the properties of the images
+such as hovering and filtering are not part of the picture tag. But I have indeed used the sepia filter tag for both images. */
+.picture { 
+    opacity: 1;
+    display: grid;
+    width: 200vh;
+    height: 150vh;
+    border-spacing: 0cm;
+    transition: .15s ease;
+    backface-visibility: hidden;
+    object-fit: fill;
+}
+
+.gallery-item:hover .picture {
+    filter: sepia(1);
+}
+
+.gallery-item:hover .centre {
+    opacity: 1;
+}
+
+@media (max-width: 500px) {
+    .gallery-item{
+        max-width: 100%;
+        grid-column: 2;
+        font-family: Oswald, sans-serif;
+        text-align: right;
+    }
+}
+
+/*I still don't know what the hr heading even now. But using it in between the pictures helped me organise and create gaps in between them.*/
+hr{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 0rem;
+    line-height: 0.5rem;
+    padding-top: 1.5em;
+    margin: 60px;
+}
+
+.icon{
+    height: 15vh;
+    width: 15vh;
+    border-radius: 100%;
+}
